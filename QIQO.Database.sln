@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "QIQO.Database", "QIQO.Database\QIQO.Database.sqlproj", "{B70C9E00-3D42-41BC-A74B-2C5029579206}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B70C9E00-3D42-41BC-A74B-2C5029579206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70C9E00-3D42-41BC-A74B-2C5029579206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70C9E00-3D42-41BC-A74B-2C5029579206}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B70C9E00-3D42-41BC-A74B-2C5029579206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70C9E00-3D42-41BC-A74B-2C5029579206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70C9E00-3D42-41BC-A74B-2C5029579206}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rdrrl7:8080/tfs/qiqobusiness
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = QIQO.Database\\QIQO.Database.sqlproj
+		SccProjectName1 = QIQO.Database
+		SccLocalPath1 = QIQO.Database
+	EndGlobalSection
+EndGlobal

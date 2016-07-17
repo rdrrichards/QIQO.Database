@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>QIQO.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b70c9e00-3d42-41bc-a74b-2c5029579206}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>QIQO.Database</RootNamespace>
+    <AssemblyName>QIQO.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Sequences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\invoice.sql" />
+    <Build Include="dbo\Tables\contact_type.sql" />
+    <Build Include="dbo\Tables\order_header.sql" />
+    <Build Include="dbo\Tables\attribute_type.sql" />
+    <Build Include="dbo\Tables\invoice_item.sql" />
+    <Build Include="dbo\Tables\entity_entity.sql" />
+    <Build Include="dbo\Tables\entity_product.sql" />
+    <Build Include="dbo\Tables\address_postal.sql" />
+    <Build Include="dbo\Tables\entity_type.sql" />
+    <Build Include="dbo\Tables\entity_person.sql" />
+    <Build Include="dbo\Tables\error_log.sql" />
+    <Build Include="dbo\Tables\fee_schedule.sql" />
+    <Build Include="dbo\Tables\account.sql" />
+    <Build Include="dbo\Tables\ledger.sql" />
+    <Build Include="dbo\Tables\account_type.sql" />
+    <Build Include="dbo\Tables\address.sql" />
+    <Build Include="dbo\Tables\invoice_status.sql" />
+    <Build Include="dbo\Tables\address_type.sql" />
+    <Build Include="dbo\Tables\user_session.sql" />
+    <Build Include="dbo\Tables\attribute.sql" />
+    <Build Include="dbo\Tables\order_item.sql" />
+    <Build Include="dbo\Tables\order_status.sql" />
+    <Build Include="dbo\Tables\audit_log.sql" />
+    <Build Include="dbo\Tables\person.sql" />
+    <Build Include="dbo\Tables\chart_of_accounts.sql" />
+    <Build Include="dbo\Tables\person_type.sql" />
+    <Build Include="dbo\Tables\product.sql" />
+    <Build Include="dbo\Tables\comment.sql" />
+    <Build Include="dbo\Tables\ledger_txn.sql" />
+    <Build Include="dbo\Tables\comment_type.sql" />
+    <Build Include="dbo\Tables\product_type.sql" />
+    <Build Include="dbo\Tables\company.sql" />
+    <Build Include="dbo\Tables\vendor.sql" />
+    <Build Include="dbo\Tables\contact.sql" />
+    <Build Include="Security\businessuser.sql" />
+    <Build Include="Security\businessuser_1.sql" />
+    <Build Include="Security\reportuser.sql" />
+    <Build Include="Security\reportuser_1.sql" />
+    <Build Include="Security\RDRRL8_QIQOServiceAccount.sql" />
+    <Build Include="Security\RDRRL8_QIQOServiceAccount_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\udf_ProperCase.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_txn_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_txn_all_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_find.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_txn_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_txn_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_txn_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_get_next_invoice_num.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ledger_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_get_next_order_num.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_all_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_all_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_item_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_get_emp_rel.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_all_by_company_reponly.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_item_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_all_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_item_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_item_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_open_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_open_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_status_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_status_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_status_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_status_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LogError.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_type_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_all_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_type_get_cat.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_all_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_postal_counties_by_postal.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_type_get_cat.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_get_next_emp_num.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_type_get_cat.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_open_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_get_next_acct_num.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_type_get_cat.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_open_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_get_next_vend_num.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_type_get_cat.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_item_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_ups_emp_rel.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_item_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_item_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_item_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_status_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_status_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_item_get_by_order_item.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_status_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_get_for_invoice.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_status_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_all_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_del_o.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_del_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_all_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_all_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_all_by_person.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_all_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_all_by_entity.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_account_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_all_by_entity.sql" />
+    <Build Include="dbo\Stored Procedures\usp_product_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_vendor_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_vendor_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_vendor_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_postal_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_vendor_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_postal_all_by_country.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_postal_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_postal_states_by_country.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_address_postal_counties_by_state.sql" />
+    <Build Include="dbo\Stored Procedures\usp_user_session_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_all_by_entity.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_user_session_get_by_key.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_user_session_get_by_code.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_user_session_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_user_session_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_find.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_attribute_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_audit_log_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_audit_log_all_bus_obj.sql" />
+    <Build Include="dbo\Stored Procedures\usp_audit_log_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_audit_log_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_all_by_product.sql" />
+    <Build Include="dbo\Stored Procedures\usp_audit_log_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_all_by_company_code.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_all_by_company_key.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_chart_of_accounts_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_comment_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_all_by_person.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_all_by_company_reponly.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_del_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_order_header_find.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_invoice_del_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_product_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_product_all_by_entity.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_product_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_product_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_product_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_type_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_type_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_type_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_type_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_all.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_all_by_account.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_all_by_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_del.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_contact_all_by_entity.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_get_c.sql" />
+    <Build Include="dbo\Stored Procedures\usp_fee_schedule_ups.sql" />
+    <Build Include="dbo\Stored Procedures\usp_person_by_creds.sql" />
+    <Build Include="dbo\Stored Procedures\usp_entity_person_get_by_rel.sql" />
+    <Build Include="dbo\Sequences\fee_schedule_key_seq.sql" />
+    <Build Include="dbo\Sequences\general_ledger_key_seq.sql" />
+    <Build Include="dbo\Sequences\general_ledger_txn_key_seq.sql" />
+    <Build Include="dbo\Sequences\invoice_item_key_seq.sql" />
+    <Build Include="dbo\Sequences\invoice_key_seq.sql" />
+    <Build Include="dbo\Sequences\invoice_status_key_seq.sql" />
+    <Build Include="dbo\Sequences\order_header_key_seq.sql" />
+    <Build Include="dbo\Sequences\order_item_key_seq.sql" />
+    <Build Include="dbo\Sequences\order_status_key_seq.sql" />
+    <Build Include="dbo\Sequences\account_key_seq.sql" />
+    <Build Include="dbo\Sequences\account_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\address_key_seq.sql" />
+    <Build Include="dbo\Sequences\address_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\attribute_key_seq.sql" />
+    <Build Include="dbo\Sequences\attribute_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\audit_log_key_seq.sql" />
+    <Build Include="dbo\Sequences\user_session_key_seq.sql" />
+    <Build Include="dbo\Sequences\chart_of_accounts_key_seq.sql" />
+    <Build Include="dbo\Sequences\comment_key_seq.sql" />
+    <Build Include="dbo\Sequences\comment_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\company_key_seq.sql" />
+    <Build Include="dbo\Sequences\contact_key_seq.sql" />
+    <Build Include="dbo\Sequences\contact_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\entity_entity_key_seq.sql" />
+    <Build Include="dbo\Sequences\entity_person_key_seq.sql" />
+    <Build Include="dbo\Sequences\entity_product_key_seq.sql" />
+    <Build Include="dbo\Sequences\entity_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\error_log_key_seq.sql" />
+    <Build Include="dbo\Sequences\person_key_seq.sql" />
+    <Build Include="dbo\Sequences\person_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\product_key_seq.sql" />
+    <Build Include="dbo\Sequences\product_type_key_seq.sql" />
+    <Build Include="dbo\Sequences\vendor_key_seq.sql" />
+  </ItemGroup>
+</Project>
