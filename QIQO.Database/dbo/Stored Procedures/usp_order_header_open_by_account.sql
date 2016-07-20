@@ -37,3 +37,15 @@ AND A.[order_status_key] NOT IN (6,12,13,14)
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_header_open_by_account] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_header_open_by_account] TO [businessuser]
+    AS [dbo];
+

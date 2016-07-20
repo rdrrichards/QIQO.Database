@@ -25,3 +25,15 @@ FROM order_status
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_status_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_status_all] TO [businessuser]
+    AS [dbo];
+

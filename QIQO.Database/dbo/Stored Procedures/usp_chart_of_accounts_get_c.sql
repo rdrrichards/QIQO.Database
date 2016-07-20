@@ -32,3 +32,15 @@ AND B.company_code = @company_code
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_chart_of_accounts_get_c] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_chart_of_accounts_get_c] TO [businessuser]
+    AS [dbo];
+

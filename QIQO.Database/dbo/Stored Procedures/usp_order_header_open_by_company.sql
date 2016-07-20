@@ -40,3 +40,15 @@ ORDER By A.order_entry_date DESC
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_header_open_by_company] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_header_open_by_company] TO [businessuser]
+    AS [dbo];
+

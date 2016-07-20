@@ -30,3 +30,15 @@ WHERE company_key = @company_key
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_chart_of_accounts_all_by_company_key] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_chart_of_accounts_all_by_company_key] TO [businessuser]
+    AS [dbo];
+

@@ -28,3 +28,15 @@ FROM user_session
 WHERE active_flg = 1
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_user_session_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_user_session_all] TO [businessuser]
+    AS [dbo];
+

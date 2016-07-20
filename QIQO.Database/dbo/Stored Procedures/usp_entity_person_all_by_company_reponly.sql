@@ -38,3 +38,15 @@ WHERE D.company_key = @company_key
 AND A.person_type_key = @rep_type
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_all_by_company_reponly] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_all_by_company_reponly] TO [businessuser]
+    AS [dbo];
+

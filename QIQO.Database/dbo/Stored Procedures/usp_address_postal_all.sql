@@ -22,3 +22,15 @@ FROM address_postal
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_address_postal_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_address_postal_all] TO [businessuser]
+    AS [dbo];
+

@@ -50,3 +50,15 @@ AND B.attribute_type_code = 'VENDORNUMP'
 SELECT @new_number = RIGHT(REPLICATE('0', @char_len) + CONVERT(varchar(30), @new_vend_num), @char_len)
 
 SELECT @new_number
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_get_next_vend_num] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_get_next_vend_num] TO [businessuser]
+    AS [dbo];
+

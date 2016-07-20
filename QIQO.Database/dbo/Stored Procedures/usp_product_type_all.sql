@@ -25,3 +25,15 @@ FROM product_type
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_product_type_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_product_type_all] TO [businessuser]
+    AS [dbo];
+

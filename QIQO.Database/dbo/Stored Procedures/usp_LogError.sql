@@ -11,3 +11,15 @@ SELECT
         ,ERROR_PROCEDURE() AS ErrorProcedure
         ,ERROR_LINE() AS ErrorLine
         ,ERROR_MESSAGE() AS ErrorMessage, @table_name, @procedure_name, @step
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_LogError] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_LogError] TO [businessuser]
+    AS [dbo];
+

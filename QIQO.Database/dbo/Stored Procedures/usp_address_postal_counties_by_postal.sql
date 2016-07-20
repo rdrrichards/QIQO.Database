@@ -25,3 +25,15 @@ ORDER BY [county_name]
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_address_postal_counties_by_postal] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_address_postal_counties_by_postal] TO [businessuser]
+    AS [dbo];
+

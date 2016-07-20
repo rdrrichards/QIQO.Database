@@ -25,3 +25,15 @@ WHERE [person_type_category] = @person_type_category
 
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_person_type_get_cat] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_person_type_get_cat] TO [businessuser]
+    AS [dbo];
+

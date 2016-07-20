@@ -38,3 +38,15 @@ AND GETDATE() BETWEEN A.[start_date] AND A.[end_date]
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_by_account] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_by_account] TO [businessuser]
+    AS [dbo];
+

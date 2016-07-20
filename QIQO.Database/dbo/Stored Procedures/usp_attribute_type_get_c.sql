@@ -27,3 +27,15 @@ WHERE [attribute_type_category] = @attribute_type_code
 
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_attribute_type_get_c] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_attribute_type_get_c] TO [businessuser]
+    AS [dbo];
+

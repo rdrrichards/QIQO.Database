@@ -36,3 +36,15 @@ AND C.account_code = @account_code
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_fee_schedule_get_c] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_fee_schedule_get_c] TO [businessuser]
+    AS [dbo];
+

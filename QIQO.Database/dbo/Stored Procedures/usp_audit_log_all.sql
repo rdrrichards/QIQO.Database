@@ -31,3 +31,15 @@ ORDER BY [audit_datetime] DESC
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_audit_log_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_audit_log_all] TO [businessuser]
+    AS [dbo];
+

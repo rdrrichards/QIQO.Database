@@ -35,7 +35,7 @@ SET NOCOUNT ON
 IF @ledger_txn_key = 0 BEGIN
 	BEGIN TRY
 	DECLARE @new_key int;
-	--SELECT @new_key = NEXT VALUE FOR ledger_txn_key_seq;
+	SELECT @new_key = NEXT VALUE FOR ledger_txn_key_seq;
 	INSERT INTO ledger_txn ([ledger_txn_key],
 		[ledger_key],
 		txn_comment,
@@ -112,4 +112,16 @@ SET NOCOUNT OFF
 
 
 
+
+
+GO
+GRANT EXECUTE
+	ON OBJECT::[dbo].[usp_ledger_txn_ups] TO [RDRRL8\QIQOServiceAccount]
+	AS [dbo];
+
+
+GO
+GRANT EXECUTE
+	ON OBJECT::[dbo].[usp_ledger_txn_ups] TO [businessuser]
+	AS [dbo];
 

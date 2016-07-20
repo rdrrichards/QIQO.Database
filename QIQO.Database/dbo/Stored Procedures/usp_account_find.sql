@@ -34,3 +34,15 @@ AND ([account_code] LIKE '%' + @account_pattern + '%'
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_account_find] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_account_find] TO [businessuser]
+    AS [dbo];
+

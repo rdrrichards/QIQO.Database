@@ -30,3 +30,15 @@ AND B.attribute_value = @user_name
 
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_person_by_creds] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_person_by_creds] TO [businessuser]
+    AS [dbo];
+

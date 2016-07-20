@@ -66,3 +66,15 @@ SET NOCOUNT OFF
 
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_account_type_ups] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_account_type_ups] TO [businessuser]
+    AS [dbo];
+

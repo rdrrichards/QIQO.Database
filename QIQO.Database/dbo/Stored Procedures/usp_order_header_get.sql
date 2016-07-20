@@ -36,3 +36,15 @@ WHERE [order_key] = @order_key
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_header_get] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_header_get] TO [businessuser]
+    AS [dbo];
+

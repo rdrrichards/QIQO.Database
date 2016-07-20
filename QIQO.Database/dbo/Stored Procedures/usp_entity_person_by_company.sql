@@ -39,3 +39,15 @@ AND A.entity_type_key NOT IN (12,13)
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_by_company] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_by_company] TO [businessuser]
+    AS [dbo];
+

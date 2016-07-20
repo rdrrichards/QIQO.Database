@@ -32,3 +32,15 @@ WHERE [audit_log_key] = @audit_log_key
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_audit_log_get] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_audit_log_get] TO [businessuser]
+    AS [dbo];
+

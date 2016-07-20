@@ -53,3 +53,15 @@ SELECT @new_number = REPLACE(REPLACE(@pat, REPLICATE('Z', @char_len), LEFT(@acct
 SELECT @new_number
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_get_next_order_num] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_get_next_order_num] TO [businessuser]
+    AS [dbo];
+

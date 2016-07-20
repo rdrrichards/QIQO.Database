@@ -29,3 +29,15 @@ WHERE [entity_person_key] = @entity_person_key
 -- AND [entity_key] = @entity_key
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_get_by_rel] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_person_get_by_rel] TO [businessuser]
+    AS [dbo];
+

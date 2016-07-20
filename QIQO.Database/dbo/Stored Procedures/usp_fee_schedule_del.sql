@@ -27,3 +27,15 @@ END CATCH
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_fee_schedule_del] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_fee_schedule_del] TO [businessuser]
+    AS [dbo];
+

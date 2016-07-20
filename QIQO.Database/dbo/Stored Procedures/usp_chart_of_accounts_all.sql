@@ -29,3 +29,15 @@ FROM chart_of_accounts
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_chart_of_accounts_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_chart_of_accounts_all] TO [businessuser]
+    AS [dbo];
+

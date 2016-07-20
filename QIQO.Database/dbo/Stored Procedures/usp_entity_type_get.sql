@@ -25,3 +25,15 @@ WHERE [entity_type_key] = @entity_type_key
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_type_get] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_entity_type_get] TO [businessuser]
+    AS [dbo];
+

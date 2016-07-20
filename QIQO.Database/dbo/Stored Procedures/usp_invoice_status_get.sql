@@ -27,3 +27,15 @@ WHERE [invoice_status_key] = @invoice_status_key
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_invoice_status_get] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_invoice_status_get] TO [businessuser]
+    AS [dbo];
+

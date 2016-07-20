@@ -38,3 +38,15 @@ ORDER BY 2, 3
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_item_all] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_order_item_all] TO [businessuser]
+    AS [dbo];
+

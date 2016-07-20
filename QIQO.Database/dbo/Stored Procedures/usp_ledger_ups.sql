@@ -25,7 +25,7 @@ SET NOCOUNT ON
 IF @ledger_key = 0 BEGIN
 	BEGIN TRY
 	DECLARE @new_key int;
-	--SELECT @new_key = NEXT VALUE FOR ledger_key_seq;
+	SELECT @new_key = NEXT VALUE FOR ledger_key_seq;
 	INSERT INTO ledger ([ledger_key],
 		[company_key],
 		--[coa_key],
@@ -72,4 +72,16 @@ SET NOCOUNT OFF
 
 
 
+
+
+GO
+GRANT EXECUTE
+	ON OBJECT::[dbo].[usp_ledger_ups] TO [RDRRL8\QIQOServiceAccount]
+	AS [dbo];
+
+
+GO
+GRANT EXECUTE
+	ON OBJECT::[dbo].[usp_ledger_ups] TO [businessuser]
+	AS [dbo];
 

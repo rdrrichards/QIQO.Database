@@ -36,3 +36,15 @@ SET NOCOUNT OFF
 
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_fee_schedule_all_by_product] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_fee_schedule_all_by_product] TO [businessuser]
+    AS [dbo];
+

@@ -82,3 +82,15 @@ END
 
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_person_ups] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_person_ups] TO [businessuser]
+    AS [dbo];
+

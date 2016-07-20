@@ -37,3 +37,15 @@ AND A.invoice_status_key NOT IN (4,5)
 
 SET NOCOUNT OFF
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_invoice_open_by_account] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_invoice_open_by_account] TO [businessuser]
+    AS [dbo];
+

@@ -30,3 +30,15 @@ AND B.entity_type_key = 3 --account
 
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_product_all_by_account] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_product_all_by_account] TO [businessuser]
+    AS [dbo];
+

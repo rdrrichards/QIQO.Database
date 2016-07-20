@@ -30,3 +30,15 @@ WHERE [session_key] = @session_key
 AND active_flg = 1
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_user_session_get_by_key] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_user_session_get_by_key] TO [businessuser]
+    AS [dbo];
+

@@ -27,3 +27,15 @@ WHERE [contact_type_key] = @contact_type_key
 SET NOCOUNT OFF
 
 
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_contact_type_get] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_contact_type_get] TO [businessuser]
+    AS [dbo];
+

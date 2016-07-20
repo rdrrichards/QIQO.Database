@@ -23,3 +23,15 @@ BEGIN CATCH
 END CATCH
 
 SET NOCOUNT OFF
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_user_session_del] TO [RDRRL8\QIQOServiceAccount]
+    AS [dbo];
+
+
+GO
+GRANT EXECUTE
+    ON OBJECT::[dbo].[usp_user_session_del] TO [businessuser]
+    AS [dbo];
+
