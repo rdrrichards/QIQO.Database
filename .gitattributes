@@ -1,6 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.rb linguist-language=SQL
+
+* linguist-vendored
+*.js linguist-vendored=false
 
 # Custom for Visual Studio
 *.cs     diff=csharp
